@@ -218,6 +218,19 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
+const findOldestMovie = () => {
+  let year = Infinity;
+  let oldestMovie = {};
+  movies.forEach((obj) => {
+    if (obj.Year < year) {
+      year = obj.Year;
+      oldestMovie = obj;
+    }
+  });
+  return oldestMovie;
+};
+console.log(findOldestMovie());
+
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
