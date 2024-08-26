@@ -27,19 +27,32 @@ const generateTenRandomNumbers = () => {
 };
 console.log(generateTenRandomNumbers());
 
+const tenRandomNumbers = generateTenRandomNumbers();
+console.log("tenRandomNumbers", tenRandomNumbers);
+
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
-const extractEvenNumbers = (arr) => {
+function extractEvenNumbers(arr) {
   const evenNumbers = arr.filter((num) => num % 2 === 0);
   return evenNumbers;
-};
+}
 console.log(extractEvenNumbers(generateTenRandomNumbers()));
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+
+const sum = (arr) => {
+  let sum = 0;
+  arr.forEach((num) => {
+    sum += num;
+  });
+  return sum;
+};
+
+console.log(sum(tenRandomNumbers));
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
