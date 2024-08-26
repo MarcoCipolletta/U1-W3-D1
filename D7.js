@@ -276,6 +276,14 @@ console.log(sumOfFilmYears(movies));
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
+const imdbIDs = movies.map((obj) => obj.imdbID);
+const rndmImbdID = Math.floor(Math.random() * imdbIDs.length);
+
+const findMovie = (arr) => {
+  let film = arr.find((obj) => obj.imdbID === imdbIDs[rndmImbdID]);
+  return film;
+};
+console.log(findMovie(movies));
 
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
