@@ -74,6 +74,13 @@ console.log("tenRandomNumbers +", valoreN, incrementArrayValues(tenRandomNumbers
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+const stringsArr = ["c", "ciaooo", "scuolaaa", "epicode", "migliore"];
+
+const getStringLengths = (arr) => {
+  const stringLength = arr.map((string) => string.length);
+  return stringLength;
+};
+console.log(getStringLengths(stringsArr));
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
