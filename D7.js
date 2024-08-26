@@ -62,6 +62,14 @@ console.log(sum(tenRandomNumbers));
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 
+const incrementArrayValues = (arr, n = 1) => {
+  const newArr = arr.map((num) => num + n);
+  return newArr;
+};
+const valoreN = Math.floor(Math.random() * 10);
+
+console.log("tenRandomNumbers +", valoreN, incrementArrayValues(tenRandomNumbers, valoreN));
+
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
