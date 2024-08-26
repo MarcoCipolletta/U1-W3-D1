@@ -288,3 +288,9 @@ console.log(findMovie(movies));
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+
+const findI = (arr, year) => {
+  return arr.findIndex((obj) => obj.Year === year);
+};
+let yearToFind = "1963";
+console.log(findI(movies, yearToFind));
