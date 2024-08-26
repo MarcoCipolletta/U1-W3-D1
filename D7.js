@@ -264,6 +264,15 @@ console.log(getMoviesFrom2000s(movies));
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 
+const sumOfFilmYears = (arr) => {
+  let sum = 0;
+  arr.forEach((obj) => {
+    sum += parseInt(obj.Year);
+  });
+  return sum;
+};
+console.log(sumOfFilmYears(movies));
+
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
