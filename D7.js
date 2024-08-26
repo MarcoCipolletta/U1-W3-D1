@@ -31,6 +31,12 @@ console.log(generateTenRandomNumbers());
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
+const extractEvenNumbers = (arr) => {
+  const evenNumbers = arr.filter((num) => num % 2 === 0);
+  return evenNumbers;
+};
+console.log(extractEvenNumbers(generateTenRandomNumbers()));
+
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
