@@ -64,7 +64,7 @@ console.log(sum(tenRandomNumbers));
 
 const incrementArrayValues = (arr, n = 1) => {
   const newArr = arr.map((num) => num + n);
-  return newArr;
+  return newArr; //potevo mettere direttamente il return prima del map invece che creare la nuova variabile
 };
 const valoreN = Math.floor(Math.random() * 10);
 
@@ -78,7 +78,7 @@ const stringsArr = ["c", "ciaooo", "scuolaaa", "epicode", "migliore"];
 
 const getStringLengths = (arr) => {
   const stringLength = arr.map((string) => string.length);
-  return stringLength;
+  return stringLength; //potevo mettere direttamente il return prima del map invece che creare la nuova variabile
 };
 console.log(getStringLengths(stringsArr));
 
@@ -236,6 +236,7 @@ console.log(findOldestMovie(movies));
 */
 
 const numbersOfMovies = (arr) => {
+  //potevo usare la freccia senza graffe e senza return perchè il return diventa implicito
   return arr.length;
 };
 console.log("ci sono", numbersOfMovies(movies), "film");
@@ -264,6 +265,7 @@ console.log(getMoviesFrom2000s(movies));
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 
+//con forEach
 const sumOfFilmYears = (arr) => {
   let sum = 0;
   arr.forEach((obj) => {
@@ -273,15 +275,17 @@ const sumOfFilmYears = (arr) => {
 };
 console.log(sumOfFilmYears(movies));
 
+// con reduce
+const sumOfFilmYearsReduce = (arr) => arr.reduce((accumulator, currentValue) => accumulator + parseInt(currentValue.Year), 0);
+console.log(sumOfFilmYearsReduce(movies));
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 const imdbIDs = movies.map((obj) => obj.imdbID);
 const rndmImbdID = Math.floor(Math.random() * imdbIDs.length);
-
+console.log("imdbID del film:", imdbIDs[rndmImbdID]);
 const findMovie = (arr) => {
-  let film = arr.find((obj) => obj.imdbID === imdbIDs[rndmImbdID]);
-  return film;
+  return arr.find((obj) => obj.imdbID === imdbIDs[rndmImbdID]);
 };
 console.log(findMovie(movies));
 
